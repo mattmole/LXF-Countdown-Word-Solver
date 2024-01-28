@@ -1,4 +1,3 @@
-from typing import Union
 from fastapi import FastAPI
 from countdown import Countdown
 
@@ -35,7 +34,6 @@ def generateWord(numLetters):
         elif numLettersInt >= 7:
             a.letterNumber = numLettersInt
             a.genRandomLetters()
-            a.letterNumber = numLettersInt
             return {"numLetters": numLetters, "generatedLetters": a.generatedLetters}
 
 @app.get("/findAndDisplay/")
